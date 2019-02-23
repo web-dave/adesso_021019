@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 346db726a9af99accc40e7d78a12ef7974f3dbe9 Dave <dave@webdave.de> 1550833622 +0100	clone: from https://github.com/angularjs-de/angular-advanced-workshop.git
+346db726a9af99accc40e7d78a12ef7974f3dbe9 d48b82ba7b4f2e85a83bde278e1f0b17644ada51 Dave <dave@webdave.de> 1550834106 +0100	commit: book
+d48b82ba7b4f2e85a83bde278e1f0b17644ada51 f8601d254b58ec31d5842212993456bd30d9e584 Dave <dave@webdave.de> 1550834110 +0100	checkout: moving from master to change-detection
+f8601d254b58ec31d5842212993456bd30d9e584 b7bb271e9095163b15efa345439e3af61ef93f6a Dave <dave@webdave.de> 1550844577 +0100	checkout: moving from change-detection to testing
+b7bb271e9095163b15efa345439e3af61ef93f6a 3a74412b48befadcb74d4807ff1f80d7466363bb Dave <dave@webdave.de> 1550910821 +0100	commit: testing service

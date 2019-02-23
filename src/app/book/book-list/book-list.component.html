@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">ISBN</th>
+      <th scope="col">Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="book-row" *ngFor="let book of books | async">
+      <td><a [routerLink]="[book.isbn]">{{book.title}}</a></td>
+      <td>{{book.isbn}}</td>
+      <td>{{book.author}}</td>
+    </tr>
+  </tbody>
+</table>

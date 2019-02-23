@@ -1,0 +1,7 @@
+# pack-refs with: peeled fully-peeled sorted 
+f8601d254b58ec31d5842212993456bd30d9e584 refs/remotes/origin/change-detection
+d314866ac1f600c6bfc00f40afe89f206d8d4c05 refs/remotes/origin/greenkeeper/initial
+18fdd32c61abdbef718ecf8dde042227e7e8573f refs/remotes/origin/issue-report-store-devtools
+346db726a9af99accc40e7d78a12ef7974f3dbe9 refs/remotes/origin/master
+5b22752494a1cf3f8c7453c12ac1d013ab5f6c18 refs/remotes/origin/redux
+b7bb271e9095163b15efa345439e3af61ef93f6a refs/remotes/origin/testing
