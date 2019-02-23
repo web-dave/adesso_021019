@@ -6,42 +6,55 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BookListComponent } from './book-list.component';
 import { DebugElement } from '@angular/core';
 
-
-describe('BookListComponent', () => {
+fdescribe('BookListComponent', () => {
   let component: BookListComponent;
   let fixture: ComponentFixture<BookListComponent>;
   let compiled;
+  let service: BookStaticAsyncDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        BookListComponent
-      ],
-      imports: [
-        RouterTestingModule.withRoutes([])
-      ],
-      providers: []
-    })
-      .compileComponents();
+      declarations: [BookListComponent],
+      imports: [RouterTestingModule.withRoutes([])],
+      providers: [
+        {
+          provide: BookDataService,
+          useClass: BookStaticAsyncDataService
+        }
+      ]
+    }).compileComponents();
+    service = TestBed.get(BookDataService);
   });
 
   beforeEach(() => {
     // create component and detect changes
+    fixture = TestBed.createComponent(BookListComponent);
+    component = fixture.debugElement.componentInstance;
+    compiled = fixture.debugElement.nativeElement;
+    fixture.detectChanges();
   });
 
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-  
+
   it('should recieve 3 Books', () => {
-    expect(true).toBeFalsy();
+    expect(compiled.querySelectorAll('.book-row').length).toBe(3);
   });
 
   it('should display the title of each book', () => {
-    expect(true).toBeFalsy();
+    const list = compiled.querySelectorAll('.book-row>td>a');
+    for (let i = 0; i < list.length; i++) {
+      expect(list[i].innerHTML).toBe(service.staticBookData[i].title);
+    }
   });
 
   it('should link to the edit page of each book', () => {
-    expect(true).toBeFalsy();
+    const list = compiled.querySelectorAll('.book-row>td>a');
+    for (let i = 0; i < list.length; i++) {
+      expect(list[i].href).toBe(
+        'http://localhost:9876/' + service.staticBookData[i].isbn
+      );
+    }
   });
 });

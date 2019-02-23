@@ -7,7 +7,7 @@ import {
 import { Book } from './book';
 import { BookDataService } from './book-data.service';
 
-fdescribe('BookStaticDataService', () => {
+describe('BookStaticDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [BookDataService],
