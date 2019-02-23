@@ -48,6 +48,7 @@
     "karma-mocha-reporter": "2.2.5",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-remap-istanbul": "^0.6.0",
+    "karma-summary-reporter": "^1.6.0",
     "protractor": "~5.2.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",

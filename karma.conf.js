@@ -3,41 +3,42 @@
 
 module.exports = function(config) {
   config.set({
-    basePath: "",
-    frameworks: ["jasmine", "@angular/cli"],
+    basePath: '',
+    frameworks: ['jasmine', '@angular/cli'],
     plugins: [
-      require("karma-jasmine"),
-      require("karma-phantomjs-launcher"),
-      require("karma-remap-istanbul"),
-      require("@angular/cli/plugins/karma"),
-      require("karma-mocha-reporter")
+      require('karma-jasmine'),
+      require('karma-phantomjs-launcher'),
+      require('karma-remap-istanbul'),
+      require('@angular/cli/plugins/karma'),
+      require('karma-mocha-reporter'),
+      require('karma-summary-reporter')
     ],
-    files: [{ pattern: "./src/test.ts", watched: false }],
+    files: [{ pattern: './src/test.ts', watched: false }],
     preprocessors: {
-      "./src/test.ts": ["@angular/cli"]
+      './src/test.ts': ['@angular/cli']
     },
     mime: {
-      "text/x-typescript": ["ts", "tsx"]
+      'text/x-typescript': ['ts', 'tsx']
     },
     remapIstanbulReporter: {
       reports: {
-        html: "coverage",
-        lcovonly: "./coverage/coverage.lcov"
+        html: 'coverage',
+        lcovonly: './coverage/coverage.lcov'
       }
     },
     angularCli: {
-      config: "./angular-cli.json",
-      environment: "dev"
+      config: './angular-cli.json',
+      environment: 'dev'
     },
     reporters:
       config.angularCli && config.angularCli.codeCoverage
-        ? ["mocha", "karma-remap-istanbul"]
-        : ["mocha"],
+        ? ['summary', 'karma-remap-istanbul']
+        : ['mocha', 'summary'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ["PhantomJS"],
+    browsers: ['PhantomJS'],
     singleRun: false
   });
 };

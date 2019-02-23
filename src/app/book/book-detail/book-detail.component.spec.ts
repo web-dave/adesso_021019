@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 
-fdescribe('BookDetailComponent', () => {
+describe('BookDetailComponent', () => {
   let component: BookDetailComponent;
   let fixture: ComponentFixture<BookDetailComponent>;
   let service: BookDataService;
